@@ -6,19 +6,20 @@
 Edit `www/js/index.js` and add the following code inside `onDeviceReady`
 
 ```js
+    var num1 = 5;
+    var num2 = 6;
     var success = function(message) {
         alert(message);
     }
 
     var failure = function() {
-        alert("Error calling Hello Plugin");
+        alert("Something happen!!");
     }
-    var num1 = 5;
-    var num2 = 6;
+
     calculator.add ({
-        param1: num1,
-        param2: num2
-    }, success, failure);
+            param1: num1,
+            param2: num2
+        }, success, failure);
 ```
 
 Install iOS or Android platform
