@@ -21,6 +21,9 @@ public class calculator extends CordovaPlugin {
         }else if(action.equals("add")){
             add(args,callbackContext);
             return true;
+        }else if(action.equals("substract")){
+            add(args,callbackContext);
+            return true;
         }
         return false;
     }
@@ -39,6 +42,18 @@ public class calculator extends CordovaPlugin {
             int p1 = Integer.parseInt(args.getJSONObject(0).getString("param1"));
             int p2 = Integer.parseInt(args.getJSONObject(0).getString("param1"));
             callbackContext.success(""+ p1 + p2  );
+        }else{
+            callbackContext.error("Please dont pass null value");
+        }
+
+    }
+
+    private void substract(JSONArray args, CallbackContext callbackContext){
+        
+        if(args != null){
+            int p1 = Integer.parseInt(args.getJSONObject(0).getString("param1"));
+            int p2 = Integer.parseInt(args.getJSONObject(0).getString("param1"));
+            callbackContext.success(""+ p1 - p2  );
         }else{
             callbackContext.error("Please dont pass null value");
         }
