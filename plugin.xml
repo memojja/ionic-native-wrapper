@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-calculator" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>calculator</name>
+    <js-module name="calculator" src="www/calculator.js">
+        <clobbers target="cordova.plugins.calculator" />
+    </js-module>
+</plugin>
